@@ -2,10 +2,17 @@ package com.ntsan.nbg_officialexchangerates
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ntsan.nbg_officialexchangerates.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private var binding: ActivityMainBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
+
     }
+
 }
